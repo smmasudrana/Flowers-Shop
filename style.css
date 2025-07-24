@@ -1,118 +1,297 @@
 :root {
-  /* 🎨 Color Palette */
-  --primary-color: #e95a08;
-  --secondary-color: #000000;
-  --accent-color: #e95a08;
-  --text-color: #b0b2b7;
-  --white-color: white;
-  --background-color: #f5f8ff;
+    /* 🎨 Color Palette */
+    --primary-color: #e95a08;
+    --secondary-color: #000000;
+    --accent-color: #e95a08;
+    --text-color: #b0b2b7;
+    --white-color: white;
+    --background-color: #f5f8ff;
 
-  --font-heading: "Noto Serif", serif;
-  --font-base: "Inter", sans-serif;
+    --font-heading: "Noto Serif", serif;
+    --font-base: "Inter", sans-serif;
 }
-body{
+
+body {
     background-color: var(--background-color);
 }
 
 /* header section styels */
-header{
+header {
     width: 1140px;
     margin: 0 auto;
 }
-nav{
+
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 0px;
 }
-.logo img{
+
+.logo img {
     width: 110px;
 }
-ul{
+
+.menu-item ul {
     list-style: none;
     display: flex;
     gap: 25px;
 }
-ul li{
+
+.menu-item ul li {
     font-family: var(--font-base);
     font-size: 16px;
     color: #8987a1;
 }
-ul li:first-child{
+
+.menu-item ul li:first-child {
     font-family: var(--font-base);
     font-size: 18px;
-    font-weight:500;
+    font-weight: 500;
     color: var(--font-heading);
 }
-ul li:last-child{
+
+.menu-item ul li:last-child {
     font-family: var(--font-base);
     font-size: 18px;
     color: var(--font-heading);
 }
+
 /* header section responsive */
 @media screen and (max-width: 576px) {
-    body{
+    body {
         padding: 20px;
         overflow: hidden;
     }
-    nav{
+
+    nav {
         margin: 20px;
         align-items: center;
     }
-    .logo img{
+
+    .logo img {
         width: 200px;
     }
-    ul .hide{
+
+    ul .hide {
         display: none;
     }
+
     ul li:last-child {
-    font-size: 35px;
-}
+        font-size: 35px;
+    }
 }
 
+
+
 /* banner section styles */
-.banner-section{
+.banner-section {
     padding: 70px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.banner-section h1{
+
+.banner-section h1 {
     font-family: var(--font-heading);
     font-size: 65px;
     font-weight: bold;
     margin: 5px 0px;
 }
-.banner-section .pry-span{
-   color: var(--primary-color);
+
+.banner-section .pry-span {
+    color: var(--primary-color);
 }
-.banner-section p{
+
+.banner-section p {
     font-size: 22px;
     font-family: var(--font-base);
     color: var(--text-color);
 }
+
 /* banner responsive */
 @media screen and (max-width: 576px) {
-    .banner-section{
+    .banner-section {
         display: flex;
         flex-direction: column-reverse;
         gap: 50px;
         padding: 20px;
     }
-    .banner-image{
+
+    .banner-image {
         width: 100%;
         text-align: end;
     }
-    .banner-image img{
+
+    .banner-image img {
         width: 100%;
         position: relative;
         right: 0;
         bottom: 0;
     }
-    .banner-content h1{
-    width: 50%;
+
+    .banner-content h1 {
+        width: 50%;
     }
-    .banner-section p{
-    font-size: 50px;
+
+    .banner-section p {
+        font-size: 50px;
     }
 }
+
+
+/* plants section styles */
+.plants-section {
+    padding: 50px 0px;
+    text-align: center;
+}
+
+.plants-section h1 {
+    font-family: var(--font-heading);
+    font-size: 50px;
+    font-weight: bold;
+    margin: 5px 0px;
+}
+
+.plants-section .pry-span {
+    color: var(--primary-color);
+}
+
+.plants-section p {
+    font-size: 22px;
+    font-family: var(--font-base);
+    color: var(--text-color);
+    width: 70%;
+    margin: 0 auto;
+}
+
+.all-plant {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 30px 0px;
+    gap: 20px;
+    row-gap: 50px;
+}
+
+.plant h1 {
+    font-size: 22px;
+    font-family: var(--font-base);
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.plant p {
+    font-size: 22px;
+    font-family: var(--font-base);
+    font-weight: bold;
+    margin: 0px;
+}
+
+.plant button {
+    background-color: var(--accent-color);
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+}
+
+.plant a {
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 16px;
+    font-family: var(--font-base);
+    font-weight: 600;
+}
+
+/* plants section responsive */
+@media screen and (max-width: 576px) {
+    .plants-section p {
+        font-size: 35px;
+    }
+    .all-plant {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 30px 0px;
+        gap: 20px;
+        row-gap: 20px;
+    }
+
+    .plant img {
+        width: 100%;
+    }
+
+    .plant h1 {
+        font-size: 35px;
+        font-family: var(--font-base);
+        font-weight: 600;
+        margin-top: 20px;
+    }
+
+    .plant h2 {
+        font-size: 35px;
+        font-family: var(--font-base);
+        font-weight: bold;
+        margin: 10px 0px;
+    }
+
+    .plant a {
+        text-decoration: none;
+        color: var(--white-color);
+        font-size: 35px;
+        font-family: var(--font-base);
+        font-weight: 600;
+    }
+}
+
+
+
+/* plant lover section */
+/* .plant-lover-section{
+    padding: 50px 0px;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 50px;
+}
+.plant-lover-image .store {
+    width: 100%;
+}
+.plant-lover-image{
+     position: relative;
+     width: 100%;
+}
+.badge{
+    width:50%;
+    position: absolute;
+    top: -100px;
+    right: -80px;
+}
+.plant-lover-content h1{
+    font-size: 50px;
+    font-family: var(--font-heading);
+    color: var(--secondary-color);
+}
+.plant-lover-content{
+    width: 100%;
+}
+.plant-lover-content ul{
+    display: grid;
+    row-gap: 35px;
+}
+.plant-lover-content ul li{
+    font-size: 22px;
+    font-family: var(--font-base);
+    color: var(--text-color);
+} */
+/* plant lover section responsive */
+/* @media screen and (max-width: 576px) {
+    .plant-lover-section{
+    display: flex;
+    flex-direction: column;
+    }
+    .badge{
+        display: none;
+    }
+    .plant-lover-content ul li{
+    font-size: 35px;
+    }
+} */
