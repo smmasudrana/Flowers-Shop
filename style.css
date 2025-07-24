@@ -1,0 +1,118 @@
+:root {
+  /* 🎨 Color Palette */
+  --primary-color: #e95a08;
+  --secondary-color: #000000;
+  --accent-color: #e95a08;
+  --text-color: #b0b2b7;
+  --white-color: white;
+  --background-color: #f5f8ff;
+
+  --font-heading: "Noto Serif", serif;
+  --font-base: "Inter", sans-serif;
+}
+body{
+    background-color: var(--background-color);
+}
+
+/* header section styels */
+header{
+    width: 1140px;
+    margin: 0 auto;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+}
+.logo img{
+    width: 110px;
+}
+ul{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+ul li{
+    font-family: var(--font-base);
+    font-size: 16px;
+    color: #8987a1;
+}
+ul li:first-child{
+    font-family: var(--font-base);
+    font-size: 18px;
+    font-weight:500;
+    color: var(--font-heading);
+}
+ul li:last-child{
+    font-family: var(--font-base);
+    font-size: 18px;
+    color: var(--font-heading);
+}
+/* header section responsive */
+@media screen and (max-width: 576px) {
+    body{
+        padding: 20px;
+        overflow: hidden;
+    }
+    nav{
+        margin: 20px;
+        align-items: center;
+    }
+    .logo img{
+        width: 200px;
+    }
+    ul .hide{
+        display: none;
+    }
+    ul li:last-child {
+    font-size: 35px;
+}
+}
+
+/* banner section styles */
+.banner-section{
+    padding: 70px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner-section h1{
+    font-family: var(--font-heading);
+    font-size: 65px;
+    font-weight: bold;
+    margin: 5px 0px;
+}
+.banner-section .pry-span{
+   color: var(--primary-color);
+}
+.banner-section p{
+    font-size: 22px;
+    font-family: var(--font-base);
+    color: var(--text-color);
+}
+/* banner responsive */
+@media screen and (max-width: 576px) {
+    .banner-section{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 50px;
+        padding: 20px;
+    }
+    .banner-image{
+        width: 100%;
+        text-align: end;
+    }
+    .banner-image img{
+        width: 100%;
+        position: relative;
+        right: 0;
+        bottom: 0;
+    }
+    .banner-content h1{
+    width: 50%;
+    }
+    .banner-section p{
+    font-size: 50px;
+    }
+}
