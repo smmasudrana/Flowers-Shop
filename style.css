@@ -246,7 +246,7 @@ nav {
 
 
 /* plant lover section */
-/* .plant-lover-section{
+.plant-lover-section{
     padding: 50px 0px;
     display: flex;
     justify-content: space-between;
@@ -281,9 +281,9 @@ nav {
     font-size: 22px;
     font-family: var(--font-base);
     color: var(--text-color);
-} */
+}
 /* plant lover section responsive */
-/* @media screen and (max-width: 576px) {
+@media screen and (max-width: 576px) {
     .plant-lover-section{
     display: flex;
     flex-direction: column;
@@ -294,4 +294,4 @@ nav {
     .plant-lover-content ul li{
     font-size: 35px;
     }
-} */
+}
