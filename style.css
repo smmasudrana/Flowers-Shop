@@ -1,6 +1,10 @@
-img{
+/* html, body {
     width: 100%;
-}
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+} */
 :root {
     /* 🎨 Color Palette */
     --primary-color: #e95a08;
@@ -43,28 +47,29 @@ nav {
 
 .menu-item ul li {
     font-family: var(--font-base);
-    font-size: 16px;
+    font-size: 1rem;
     color: #8987a1;
 }
 
 .menu-item ul li:first-child {
     font-family: var(--font-base);
-    font-size: 18px;
     font-weight: 500;
     color: var(--font-heading);
 }
 
 .menu-item ul li:last-child {
     font-family: var(--font-base);
-    font-size: 18px;
     color: var(--font-heading);
 }
 
 /* header section responsive */
 @media screen and (max-width: 576px) {
     body {
-        padding: 20px 30px;
-        overflow: hidden;
+        padding: 20px 20px;
+    }
+    section{
+        overflow-x: hidden;
+        padding: 50px 20px !important;
     }
 
     nav {
@@ -80,11 +85,10 @@ nav {
         display: none;
     }
 
-    ul li:last-child {
-        font-size: 35px;
+    .menu-item ul li {
+        font-size: 3rem;
     }
 }
-
 
 
 /* banner section styles */
@@ -94,12 +98,15 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
-.banner-content{
+
+.banner-content {
     width: 100%;
 }
-.banner-image{
+
+.banner-image {
     width: 100%;
 }
+
 .banner-section h1 {
     font-family: var(--font-heading);
     font-size: 65px;
@@ -213,9 +220,18 @@ nav {
 
 /* plants section responsive */
 @media screen and (max-width: 576px) {
-    .plants-section p {
-        font-size: 35px;
+    .plants-section h1 {
+        font-size: 5rem;
     }
+    .plants-section p {
+        font-size: 4rem;
+    }
+
+    .plants-section p {
+        font-size: 3rem;
+        width: 90%;
+    }
+
     .all-plant {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -229,80 +245,191 @@ nav {
     }
 
     .plant h1 {
-        font-size: 35px;
+        font-size: 3rem;
         font-family: var(--font-base);
         font-weight: 600;
         margin-top: 20px;
     }
 
     .plant h2 {
-        font-size: 35px;
+        font-size: 3rem;
         font-family: var(--font-base);
         font-weight: bold;
         margin: 10px 0px;
     }
 
     .plant a {
-        text-decoration: none;
-        color: var(--white-color);
-        font-size: 35px;
-        font-family: var(--font-base);
-        font-weight: 600;
+        font-size: 2.5rem;
     }
 }
 
 
 
 /* plant lover section */
-.plant-lover-section{
+.plant-lover-section {
     padding: 50px 0px;
     display: flex;
     justify-content: space-between;
     column-gap: 50px;
 }
+
 .plant-lover-image .store {
     width: 100%;
 }
-.plant-lover-image{
-     position: relative;
-     width: 100%;
+
+.plant-lover-image {
+    position: relative;
+    width: 100%;
 }
-.badge{
-    width:50%;
+
+.badge {
+    width: 50%;
     position: absolute;
     top: -100px;
     right: -80px;
 }
-.plant-lover-content h1{
+
+.plant-lover-content h1 {
     font-size: 50px;
     font-family: var(--font-heading);
     color: var(--secondary-color);
 }
-.plant-lover-content{
+
+.plant-lover-content {
     width: 100%;
 }
-.plant-lover-content ul{
+
+.plant-lover-content ul {
     display: grid;
     row-gap: 35px;
 }
-.plant-lover-content ul li{
+
+.plant-lover-content ul li {
     font-size: 22px;
     font-family: var(--font-base);
     color: var(--text-color);
 }
+
 /* plant lover section responsive */
 @media screen and (max-width: 576px) {
-    .plant-lover-section{
-    display: flex;
-    flex-direction: column;
+    .plant-lover-section {
+        display: flex;
+        flex-direction: column;
     }
-    .badge{
+
+    .badge {
         display: none;
     }
-    .plant-lover-content h1{
-    font-size: 4rem;
-}
-    .plant-lover-content ul li{
-    font-size: 3rem;
+
+    .plant-lover-content h1 {
+        font-size: 4rem;
     }
+
+    .plant-lover-content ul li {
+        font-size: 3rem;
+    }
+}
+
+
+
+/* Latest banner section */
+.latest-deal-section {
+    padding: 50px 0px;
+    text-align: center;
+    align-items: center;
+}
+
+.latest-deal-section h1 {
+    font-size: 3rem;
+    font-family: var(--font-heading);
+    margin: 3px;
+    color: var(--secondary-color);
+}
+
+.latest-deal-section h1 .pry-span {
+    font-size: 3rem;
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+}
+.latest-deal-section p {
+    font-size: 1.5rem;
+    width: 70%;
+    color: var(--text-color);
+    margin: 0px auto;
+}
+.latest-banners {
+    padding: 30px 0px;
+    display: flex;
+    gap: 30px;
+}
+.latest-banner-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 40%;
+}
+.latest-small {
+    height: 180px;
+    align-items: center;
+    background-size: cover;
+}
+.latest-banner-right {
+    width: 60%;
+}
+.latest-large {
+    height: 100%;
+    border: 1px solid rebeccapurple;
+    background-size: cover;
+}
+.card{
+    align-content: center;
+    border-radius: 20px;
+}
+.card h1{
+    color: var(--white-color);
+    font-size: 1.5rem;
+}
+.card p{
+    color: var(--white-color);
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+.latest-large h1{
+    color: var(--white-color);
+    font-size: 2.5rem;
+}
+.latest-large p{
+    color: var(--white-color);
+    font-size: 2rem;
+}
+/* latest banner section responsive */
+@media screen and (max-width: 576px) {
+    .latest-deal-section h1{
+    font-size: 5rem;
+    }
+    .latest-deal-section h1 .pry-span {
+    font-size: 5rem;
+    }
+    .latest-deal-section p {
+    font-size: 3rem;
+    width: 90%;
+    margin-bottom: 20px;
+    }
+    .latest-banners{
+        display: flex;
+        flex-direction: column;
+    }
+    .latest-banner-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+   }
+   .latest-banner-right {
+    width: 100%;
+  }
+  .card{
+    height: 500px;
+  }
+
 }
