@@ -1,3 +1,6 @@
+img{
+    width: 100%;
+}
 :root {
     /* 🎨 Color Palette */
     --primary-color: #e95a08;
@@ -60,7 +63,7 @@ nav {
 /* header section responsive */
 @media screen and (max-width: 576px) {
     body {
-        padding: 20px;
+        padding: 20px 30px;
         overflow: hidden;
     }
 
@@ -91,7 +94,12 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
-
+.banner-content{
+    width: 100%;
+}
+.banner-image{
+    width: 100%;
+}
 .banner-section h1 {
     font-family: var(--font-heading);
     font-size: 65px;
@@ -291,7 +299,10 @@ nav {
     .badge{
         display: none;
     }
+    .plant-lover-content h1{
+    font-size: 4rem;
+}
     .plant-lover-content ul li{
-    font-size: 35px;
+    font-size: 3rem;
     }
 }
