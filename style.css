@@ -22,6 +22,11 @@ body {
     background-color: var(--background-color);
 }
 
+section{
+    width: 1140px;
+    margin: 0 auto;
+}
+
 /* header section styels */
 header {
     width: 1140px;
@@ -432,4 +437,43 @@ nav {
     height: 500px;
   }
 
+}
+
+
+/* preefooter section styles */
+.prefooter{
+    background-size: cover;
+    text-align: center;
+    height: 400px;
+    width: 1140px;
+    margin: 0 auto;
+    align-content: center;
+}
+.prefooter h1{
+    font-size: 50px;
+    font-family: var(--font-heading);
+    color: var(--white-color);
+}
+
+input[type="email"]{
+    font-size: 18px;
+    color: #808080;
+    width: 700px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    border: 1px solid #d6dded;
+}
+.prefooter input[type="submit"]{
+    font-size: 18px;
+    color: var(--white-color);
+    background-color: var(--accent-color);
+    width: 150px;
+    padding: 11px;
+    margin-left: -5px;
+    margin-bottom: 25px;
+    border: none;
+}
+/* prefooter responsive */
+@media screen and (max-width: 576px) {
 }
