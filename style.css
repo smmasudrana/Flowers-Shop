@@ -70,7 +70,8 @@ nav {
 /* header section responsive */
 @media screen and (max-width: 576px) {
     body {
-        padding: 20px 20px;
+        padding-right: 10px;
+        overflow-x: hidden;
     }
     section{
         overflow-x: hidden;
@@ -448,6 +449,7 @@ nav {
     width: 1140px;
     margin: 0 auto;
     align-content: center;
+    border-radius: 20px;
 }
 .prefooter h1{
     font-size: 50px;
@@ -476,4 +478,94 @@ input[type="email"]{
 }
 /* prefooter responsive */
 @media screen and (max-width: 576px) {
+    .prefooter{
+    height: 500px;
+    margin: 20px;
+    }
+    .prefooter h1{
+    font-size: 5rem;
+    }
+    input[type="email"]{
+    font-size: 3rem;
+    width: 500px;
+    padding: 15px;
+   }
+   .prefooter input[type="submit"]{
+    font-size: 3rem;
+    padding: 16px;
+    width: 300px;
+   }
+}
+
+
+/* footer section styles */
+
+footer{
+    padding: 70px 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 1140px;
+    margin: 0 auto;
+}
+.footer-item-1 p{
+    width: 250px;
+    font-size: 1.3rem;
+    color: var(--text-color);
+}
+.footer-item-2 ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.footer-item-2 ul li a{
+    font-size: 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+}
+.footer-item-3 ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.footer-item-3 ul li a{
+    font-size: 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+}
+.footer-item-4{
+    display: flex;
+    gap: 25px;
+}
+.footer-item-4 img{
+    margin-top: 20px;
+    width: 30px;
+    height: 30px;
+}
+/* footer responsive */
+@media screen and (max-width: 576px) {
+    footer{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 50px 20px;
+    }
+    .footer-item-1 img{
+    width: 450px;
+    }
+    .footer-item-1 p{
+    width: 100%;
+    font-size: 3.5rem;
+    }
+    .footer-item-2 ul li a{
+    font-size: 3.5rem;
+    }
+    .footer-item-3 ul li a{
+    font-size: 3.5rem;
+    }
+    .footer-item-4 img{
+    width: 70px;
+    height: 70px;
+    }
 }
